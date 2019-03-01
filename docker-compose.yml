@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  postgres10:
+    image: postgres:10-alpine
+    ports:
+      - 5434:5432/tcp
+    volumes:
+      - ./env/postgres10/data:/var/lib/postgresql/data:Z
+    environment:
+      POSTGRES_DB: nodeauth
+      POSTGRES_USER: docker
+      POSTGRES_PASSWORD: docker
