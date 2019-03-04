@@ -1,5 +1,3 @@
-const AppController = require('./app');
-
-const app = new AppController().express;
+const app = require('./app');
 
 app.listen(process.env.PORT || 3000);
